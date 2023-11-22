@@ -5,7 +5,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    # image: hello-world-js-app:1.0
     ports:
       - "3000:3000"
     volumes:
-      - ./src:/app/src
+      - ./src:/app
+    command: ["nodemon", "index.js"]

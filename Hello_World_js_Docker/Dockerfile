@@ -4,7 +4,7 @@ WORKDIR /app
 # RUN npm install
 COPY ./src /app
 RUN npm install
-RUN npm install -g nodemon
-# CMD ["nodemon", "index.js"]
+CMD ["node", "index.js"]
 EXPOSE 3000
+
 

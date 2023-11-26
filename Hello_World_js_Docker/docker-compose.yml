@@ -1,15 +1,13 @@
-version: "3"
+version: "3.8"
 
 services:
   hello-world-app:
     build:
       context: .
       dockerfile: Dockerfile
-    # image: hello-world-js-app:1.0
     ports:
       - "3000:3000"
-    volumes:
-      - ./src:/app
     environment:
       - CHOKIDAR_USEPOLLING=true
-    command: ["nodemon", "index.js"]
+    volumes:
+      - ./src:/app
